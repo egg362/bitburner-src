@@ -85,7 +85,7 @@ export const Augmentations: Record<AugmentationName, Augmentation> = (() => {
       repCost: Infinity,
       moneyCost: Infinity,
       info:
-        "A chip containing the psyche of the greatest BitRunner to ever exists. " +
+        "A chip containing the psyche of the greatest BitRunner to ever exist. " +
         "Installing this relic significantly increases ALL of your stats. " +
         "However, it may have unintended consequence on the users mental well-being.",
       stats: "Grants access to unimaginable power.",
