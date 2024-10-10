@@ -1898,7 +1898,7 @@ export interface Singularity {
    *
    * Returns a boolean indicating whether or not the player is currently performing an
    * ‘action’. These actions include working for a company/faction, studying at a university,
-   * working out at a gym, creating a program, committing a crime, or carrying out a Hacking Mission.
+   * working out at a gym, creating a program, committing a crime, etc.
    *
    * @returns True if the player is currently performing an ‘action’, false otherwise.
    */
@@ -2293,6 +2293,10 @@ export interface Singularity {
    *
    * Attempts to donate money to the specified faction in exchange for reputation.
    * Returns true if you successfully donate the money, and false otherwise.
+   *
+   * You cannot donate to your gang's faction.
+   *
+   * The specified faction must offer at least 1 type of work. You can use {@link Singularity.getFactionWorkTypes | getFactionWorkTypes} to get the list of work types of a faction.
    *
    * @param faction - Name of faction to donate to.
    * @param amount - Amount of money to donate.
@@ -8842,7 +8846,7 @@ export interface Corporation extends WarehouseAPI, OfficeAPI {
   goPublic(numShares: number): boolean;
 
   /**
-   * Bribe a faction.
+   * Bribe a faction. The specified faction must offer at least 1 type of work. You can use {@link Singularity.getFactionWorkTypes | getFactionWorkTypes} to get the list of work types of a faction.
    *
    * @remarks
    * RAM cost: 20 GB
